@@ -1,0 +1,50 @@
+{
+  "id": "pf2e-subsystems",
+  "title": "PF2e Subsystems",
+  "description": "This module adds controls and features to utilize the various subsystems of Pathfinder 2e within FoundryVTT",
+  "authors": [
+    {
+      "name": "Avry Whitesides (GeneralHuli)",
+      "url": "https://github.com/GeneralHuli",
+      "discord": "GeneralHuli"
+    }
+  ],
+  "version": "#{VERSION}#",
+  "compatibility": {
+    "minimum": "11",
+    "verified": "12.328",
+    "maximum": "12"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "pf2e",
+        "type": "system",
+        "manifest": "https://github.com/foundryvtt/pf2e/releases/download/latest/system.json",
+        "compatibility": {
+          "minimum": "6.0.1",
+          "verified": "6.0.2"
+        }
+      }
+    ]
+  },
+  "esmodules": [
+    "scripts/pf2e-subsystems.js"
+  ],
+  "styles": [
+    "styles/subsystems.css"
+  ],
+  "documentTypes": {
+    "Item": {
+      "activity": {}
+    }
+  },
+  "packs": [],
+  "url": "#{URL}#",
+  "manifest": "#{MANIFEST}#",
+  "download": "#{DOWNLOAD}#",
+  "license": "MIT",
+  "readme": "https://raw.githubusercontent.com/GeneralHuli/PF2e-Subsystems/main/README.md",
+  "bugs": "https://github.com/GeneralHuli/PF2e-Subsystems/issues",
+  "changelog": "https://github.com/GeneralHuli/PF2e-Subsystems/main/CHANGELOG.md"  
+}

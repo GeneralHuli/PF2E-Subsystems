@@ -1,0 +1,169 @@
+[data-tab="subsystems"] {
+
+    aside {
+
+        nav {
+
+            button {
+                border: none;
+                font-size: var(--font-size-18);
+                font-weight: 500;
+                padding: 0.5rem 0.5rem;
+                white-space: nowrap;
+                margin: 0.3rem 0;
+
+                &.active {
+                    background: var(--secondary);
+                    color: var(--text-light);
+                }
+            }
+        }
+    }
+    .content {
+        padding: 0.5rem;
+    }
+
+    .activities {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .activity {
+        border-image-repeat: repeat;
+        border-image-slice: 11;
+        border-image-source: url("../../../systems/pf2e/assets/sheet/frame-elegant.svg");
+        border-image-width: 14px;
+        border-style: double;
+        display: flex;
+        align-items: center;
+        height: 5rem;
+        font-family: var(--serif);
+        padding: 1rem;
+
+        .sub-data {
+            flex: 1 0 auto;
+            display: flex;
+        }
+        
+        .title {
+            color: var(--primary-dark);
+            font-size: var(--font-size-16);
+            line-height: 1em;
+            display: flex;
+            cursor: pointer;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .activity-controls {
+            display: flex;
+            justify-content: end;
+            a {
+                display: flex;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .empty {
+        div {
+            cursor: pointer;
+        }
+        .icon {
+            border: 1px dashed var(--color-border);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--font-size-14);
+            height: 2.125rem;
+            width: 2.125rem;
+        }
+        
+    }
+}
+
+form.editable {
+    .form-group {
+        input {
+            margin-left: auto;
+            max-width: 4rem;
+        }
+        #activity-turnBased {
+            margin-left: auto;
+            max-width: 4rem;
+        }
+    }
+
+    .rewards {
+        padding-top: 0.5em;
+        padding-right: 0.5em;
+
+        .create-reward {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            gap: 6px;
+            justify-content: flex-end;
+        }
+
+        .rewards-form {
+            border-bottom: 1px solid var(--color-border-light-primary);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            
+            .reward-header {
+                display: flex;
+                align-items: center;
+                margin-bottom: 0.25rem;
+                border-bottom: 1px solid var(--secondary-background);
+                padding-bottom: 0.5em;
+
+                .drag-handle {
+                    cursor: grab;
+                    font-weight: normal;
+                    margin-right: 0.375rem;
+                    padding: 0.125rem;
+                }
+
+                h3 {
+                    flex: 1;
+                    margin: 0;
+                    white-space: nowrap;
+                    padding-right: 0.5em;
+                    flex-grow: unset;
+                }
+                
+                input {
+                    float: left;
+                }
+
+                .item-controls {
+                    margin-left: auto;
+                }
+            }
+
+            .container {
+                display: grid;
+
+                .stacked {
+                    display: grid;
+                    grid-template-columns: 1fr 4fr;
+                    column-gap: 0.5rem;
+                }
+
+                .xp {
+                    display: grid;
+                    grid: 1fr/2em 1fr;
+                }
+
+                .treasure {
+                    display: grid;
+                    grid: 1fr/5em 0fr 1fr 0fr 1fr 0fr 1fr 0fr 1fr;
+                    gap: 0.5em;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+<div class="tab" data-tab="subsystems" data-region="subsystems">
+    <aside class="sidebar">
+        <nav>
+            {{#each subsystems as |subsystem|}}
+                <button type="button" data-action="change-subsystem" data-view={{subsystem.view}}>
+                    {{subsystem.name}}
+                </button>
+            {{/each}}
+        </nav>
+    </aside>
+    <section class="content">
+        {{#if isGM}}
+            <header class="content-header">
+                test
+            </header>
+        {{/if}}
+        {{#each subsystems as |subsystem|}}
+            <div class="activities" {{#unless @root.isGM}}readonly{{/unless}} data-view={{subsystem.view}}>
+                {{#if (lookup @root.activities subsystem.view)}}
+                    {{#each (lookup @root.activities subsystem.view) as |activity|}}
+                        <section class="activity" id={{activity.id}}>
+                            <div class="sub-data">
+                              <div class="title" data-action="edit-activity">{{activity.title}}</div>
+                            </div>
+                            <div class="activity-controls">
+                                <a data-action="delete-activity" data-tooltip="Delete Activity"><i class="fa-solid fa-fw fa-trash"></i></a>
+                            </div>
+                        </section>
+                    {{/each}}
+                {{/if}}
+                <section class="activity empty" data-action="new-activity">
+                    <div class="title" data-action="edit-activity">
+                        <div class="icon"><i class="fa-solid fa-plus fa-fw"></i></div>
+                        <div>
+                            <div class="name">New "{{subsystem.name}}" Activity</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        {{/each}}
+    </section>
+</div>
